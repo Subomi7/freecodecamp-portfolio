@@ -1,0 +1,273 @@
+* {
+  margin: 0px;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 62.5%;
+  padding-left: 9rem;
+  padding-right: 9rem;
+  display: grid;
+  gap: 2.6rem;
+  border: 1px solid #000;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgb(42, 126, 175);
+  background-image: linear-gradient(
+    -18deg,
+    rgb(42, 126, 175) 0%,
+    rgb(42, 126, 175) 20%,
+    white 20%,
+    white 80%,
+    rgb(42, 126, 175) 80%,
+    rgb(42, 126, 175) 100%
+  );
+}
+
+.header {
+  grid-column: 1;
+
+  grid-row: 1 / 2;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-areas: 
+  'image about';
+  
+}
+
+img {
+  width: 40vw;
+  height: 35vh;
+  height: auto;
+  object-fit: fill;
+}
+
+.about-me {
+  grid-area: about;
+  background-color: #fff;
+  font-size: 9px;
+  margin-top: 3rem;
+  margin-bottom: 3em;
+}
+
+.image-container {
+  grid-area: image;
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.centered-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  font-size: 2rem;
+}
+
+.main {
+  grid-column: 1;
+  grid-row: 2 / 3;
+  display: grid;
+  gap: 10px;
+  border: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'main1 main2 main3'
+    'main4 main5 main6';
+}
+
+.main-card {
+  font-size: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen-shot {
+  align-items: center;
+  font-size: 2em;
+  color: #fff;
+  padding: 2em;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main1 {
+  grid-area: main1;
+  background-color: rgba(187, 15, 15, 0.658);
+  background-image: linear-gradient(
+    rgba(187, 15, 15, 0.658) 0%,
+    rgba(187, 15, 15, 0.658) 70%,
+    #fff 70%,
+    #fff 100%
+  );
+}
+
+.main2 {
+  grid-area: main2;
+  background-color: rgba(90, 51, 116, 0.658);
+  background-image: linear-gradient(
+    rgba(90, 51, 116, 0.658) 0%,
+    rgba(90, 51, 116, 0.658) 70%,
+    #fff 70%,
+    #fff 100%
+  );
+}
+
+.main3 {
+  grid-area: main3;
+  background-color: rgba(42, 102, 30, 0.658);
+  background-image: linear-gradient(
+    rgba(42, 102, 30, 0.658) 0%,
+    rgba(42, 102, 30, 0.658) 70%,
+    #fff 70%,
+    #fff 100%
+  );
+}
+
+.main4 {
+  grid-area: main4;
+  background-color: rgba(197, 102, 181, 0.658);
+  background-image: linear-gradient(
+    rgba(197, 102, 181, 0.658) 0%,
+    rgba(197, 102, 181, 0.658) 70%,
+    #fff 70%,
+    #fff 100%
+  );
+}
+
+.main5 {
+  grid-area: main5;
+  background-color: rgba(204, 179, 39, 0.658);
+  background-image: linear-gradient(
+    rgba(204, 179, 39, 0.658) 0%,
+    rgba(204, 179, 39, 0.658) 70%,
+    #fff 70%,
+    #fff 100%
+  );
+}
+
+.main6 {
+  grid-area: main6;
+  background-color: rgba(2, 238, 247, 0.658);
+  background-image: linear-gradient(
+    rgba(2, 238, 247, 0.658) 0%,
+    rgba(2, 238, 247, 0.658) 70%,
+    #fff 70%,
+    #fff 100%
+  );
+}
+
+.main7 {
+  grid-area: main7;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 6px;
+}
+
+.footer {
+  grid-column: 1;
+  grid-row: 3 / 4;
+  padding-top: 5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: 
+  'contact img';
+}
+
+.contact {
+  grid-area: contact;
+  font-size: 1em;
+  padding: 2em;
+}
+
+.image {
+  grid-area: img;
+}
+
+@media (max-width: 1115px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .header {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'image about'
+    
+  }
+
+  .about-me {
+    float: right;
+  }
+  img {
+    width: 46vw;
+    height: 24vh;
+    object-fit: cover;
+  }
+  .main {
+    position: relative;
+    grid-template-areas:
+      'main1 main2'
+      'main3 main4'
+      'main5 main6';
+  }
+}
+
+@media (max-width: 500px) {
+  body{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'image'
+    'about'
+  }
+  .main {
+    position: relative;
+    grid-template-areas:
+      'main1'
+      'main2'
+      'main3'
+      'main4'
+      'main5'
+      'main6'
+      ;
+  }
+  .footer {
+    position: relative;
+    grid-template-areas:
+      'contact'
+      'img'
+      ;
+  }
+}
