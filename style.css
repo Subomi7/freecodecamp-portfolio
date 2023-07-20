@@ -2,7 +2,8 @@
   margin: 0px;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
 }
@@ -41,9 +42,7 @@ body {
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-areas: 
-  'image about';
-  
+  grid-template-areas: 'image about';
 }
 
 img {
@@ -194,8 +193,7 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: repeat(1, 1fr);
-  grid-template-areas: 
-  'contact img';
+  grid-template-areas: 'contact img';
 }
 
 .contact {
@@ -216,13 +214,7 @@ img {
   .header {
     position: relative;
     display: grid;
-    grid-template-areas: 
-    'image about'
-    
-  }
-
-  .about-me {
-    float: right;
+    grid-template-areas: 'image about';
   }
   img {
     width: 46vw;
@@ -239,18 +231,18 @@ img {
 }
 
 @media (max-width: 500px) {
-  body{
+  body {
     height: 100vh;
     padding: 0;
     margin: 0;
   }
-  
+
   .header {
     position: relative;
     display: grid;
-    grid-template-areas: 
-    'image'
-    'about'
+    grid-template-areas:
+      'image'
+      'about';
   }
   .main {
     position: relative;
@@ -260,14 +252,12 @@ img {
       'main3'
       'main4'
       'main5'
-      'main6'
-      ;
+      'main6';
   }
   .footer {
     position: relative;
     grid-template-areas:
       'contact'
-      'img'
-      ;
+      'img';
   }
 }
